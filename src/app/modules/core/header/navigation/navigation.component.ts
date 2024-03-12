@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-
+  active = 1;
+  isLogged = false;
 }

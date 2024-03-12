@@ -1,7 +1,30 @@
 .nav-tabs {
     background-color: #0262C2;
+    border: 0;
 }
 
 .nav-link {
     color: white;
+    border-radius: var(--bs-nav-tabs-border-radius);
+    margin-right: 10px;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 60px;
+    border: none;
+    background-color: #0262C2;
+}
+
+.nav-link.active {
+    background-color: #FFFFFF;
+    color: #0262C2;
+}
+
+svg.title {
+    position: absolute;
+    left: 50%;
+    margin-left: -210px
 }

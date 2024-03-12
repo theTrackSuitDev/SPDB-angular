@@ -1,17 +1,23 @@
-<ul ngbNav #nav="ngbNav" class="nav-tabs">
-    <li ngbNavItem>
-        <a class="nav-link" href="#">Home</a>
-    </li>
-    <li ngbNavItem>
-        <a class="nav-link" href="#">All Projects</a>
-    </li>
-    <li ngbNavItem>
-        <a class="nav-link" href="#">Login</a>
-    </li>
-    <li ngbNavItem>
-        <a class="nav-link" href="#">Register</a>
-    </li>
-    <li ngbNavItem>
-        <a class="nav-link" href="#">Logout</a>
-    </li>
-</ul>
+<div class="header-bar">
+    <svg class="title" height="40" width="420" xmlns="http://www.w3.org/2000/svg">
+        <text x="5" y="30" fill="none" stroke="white" font-size="35">Student Project Database</text>
+    </svg> 
+
+    <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li [ngbNavItem]="1">
+            <a ngbNavLink class="nav-link" href="#">Home</a>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink class="nav-link" href="#">All Projects</a>
+        </li>
+        <li *ngIf="!isLogged" ngbNavItem>
+            <a ngbNavLink class="nav-link" href="#">Login</a>
+        </li>
+        <li *ngIf="!isLogged" ngbNavItem>
+            <a ngbNavLink class="nav-link" href="#">Register</a>
+        </li>
+        <li *ngIf="isLogged" ngbNavItem>
+            <a class="nav-link" href="#">Logout</a>
+        </li>
+    </ul>
+</div>

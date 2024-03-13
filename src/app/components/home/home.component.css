@@ -1,0 +1,33 @@
+.home {
+    background-color: #DEE5ED;
+}
+
+.logo-wrapper {
+    width: fit-content;
+    display: inline-block;
+}
+
+aside {
+    display: inline-block;
+    height: 500px;
+}
+
+.slogans {
+    display: inline-block;
+    color: #0262C2;
+    font-size: 30px;
+    margin-left: 200px;
+    position: relative;
+}
+
+.join {
+    font-size: 30px;
+    margin-left: 350px;
+    margin-top: 80px;
+    background-color: #0262C2;
+}
+
+.join:hover {
+    background-color: #DEE5ED;
+    color: #0262C2;
+}

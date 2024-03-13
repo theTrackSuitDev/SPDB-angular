@@ -1,1 +1,33 @@
-<p>home works!</p>
+<div class="home">
+    <div class="logo-wrapper">
+        <img *ngIf="true" [@fadeInLeftOnEnter] class="logo-image" src="../../../assets/logo-color.png" alt="logo image">
+    </div>
+
+    <aside>
+        <div class="slogans">
+            <div>
+                <ngx-typed-writer [strings]="['Showcase your project.']" [startDelay]="1000" [showCursor]="false"
+                    [loop]="false" [typeSpeed]="60">
+                </ngx-typed-writer>
+            </div>
+
+            <div>
+                <ngx-typed-writer [strings]="['Share and explore ideas.']" [startDelay]="2500" [showCursor]="false"
+                    [loop]="false" [typeSpeed]="60">
+                </ngx-typed-writer>
+            </div>
+
+            <div>
+                <ngx-typed-writer *ngIf="showLastSlogan" [strings]="['Receive and leave valuable feedback.']"
+                    [showCursor]="true" [loop]="false" [typeSpeed]="60">
+                </ngx-typed-writer>
+            </div>
+        </div>
+
+
+        <div>
+            <a *ngIf="showJoinButton" [@flipInXOnEnter] href="#" class="btn btn-primary btn-lg active join" role="button" aria-pressed="true">Join now!</a>
+        </div>
+
+    </aside>
+</div>

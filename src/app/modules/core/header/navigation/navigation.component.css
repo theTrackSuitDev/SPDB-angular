@@ -28,3 +28,9 @@ svg.title {
     left: 50%;
     margin-left: -210px
 }
+
+a.logo {
+    background-color: #0262C2;
+    position: absolute;
+    left: 5px;
+}

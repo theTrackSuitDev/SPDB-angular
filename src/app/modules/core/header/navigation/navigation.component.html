@@ -20,6 +20,9 @@
         <li ngbNavItem>
             <a ngbNavLink class="nav-link" href="#">All Projects</a>
         </li>
+        <li *ngIf="isLogged" ngbNavItem>
+            <a ngbNavLink class="nav-link" href="#">Add Project</a>
+        </li>
         <li *ngIf="!isLogged" ngbNavItem>
             <a ngbNavLink class="nav-link" href="#">Login</a>
         </li>

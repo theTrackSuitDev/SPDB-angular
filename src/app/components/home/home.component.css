@@ -9,10 +9,12 @@
     width: fit-content;
     display: inline-block;
     flex: 1 1 50%;
+    margin-top: 20px;
 }
 
 .logo-wrapper img {
-    width: 100%;
+    width: 1000px;
+    height: 700px;
     min-width: 400px;
 }
 
@@ -43,6 +45,7 @@ aside {
     font-size: 30px;
     margin-left: 350px;
     margin-top: 40px;
+    border-color: #0262C2;
     background-color: #0262C2;
 }
 

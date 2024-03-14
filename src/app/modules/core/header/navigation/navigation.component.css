@@ -4,7 +4,7 @@
 }
 
 .nav-link {
-    color: white;
+    color: #FFFFFF;
     border-radius: var(--bs-nav-tabs-border-radius);
     margin-right: 10px;
 }

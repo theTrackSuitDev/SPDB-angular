@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavigationComponent } from './header/navigation/navigation.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -15,7 +16,8 @@ import { NavigationComponent } from './header/navigation/navigation.component';
   ],
   imports: [
     CommonModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   exports: [
     HeaderComponent,

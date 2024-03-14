@@ -1,1 +1,17 @@
-<p>footer works!</p>
+<div *ngIf="true" [@fadeInUpOnEnter] class="footer">
+    <div class="icons">
+        <a href="https://github.com/theTrackSuitDev/SPDB-angular" target="_blank">
+            <fa-icon [icon]="faGithub"></fa-icon>
+        </a>
+        <a href="https://t.me/+VN2i12PAynpiNDBk" target="_blank">
+            <fa-icon [icon]="faTelegram"></fa-icon>
+        </a>
+        <a href="https://www.facebook.com/softuni.bg/" target="_blank">
+            <fa-icon [icon]="faFacebook"></fa-icon>
+        </a>
+    </div>
+
+    <p>This app is created for educational and demo purposes only.</p>
+    <p>Проект за проекти</p>
+    <p>@ 2024 SoftUni Angular.</p>
+</div>

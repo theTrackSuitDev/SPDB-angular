@@ -1,29 +1,48 @@
 .home {
     background-color: #DEE5ED;
+    display: flex;
+    margin-top: 65px;
+    height: calc(100vh - 165px);
 }
 
 .logo-wrapper {
     width: fit-content;
     display: inline-block;
+    flex: 1 1 50%;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    min-width: 400px;
 }
 
 aside {
-    display: inline-block;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 50%;
 }
 
 .slogans {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     color: #0262C2;
     font-size: 30px;
     margin-left: 200px;
     position: relative;
+    flex: 1 1 50%;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+}
+
+.join-wrapper {
+    flex: 1 1 50%;
 }
 
 .join {
     font-size: 30px;
     margin-left: 350px;
-    margin-top: 80px;
+    margin-top: 40px;
     background-color: #0262C2;
 }
 

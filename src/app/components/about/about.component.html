@@ -1,3 +1,13 @@
 <div class="about">
-    <h2>about works!</h2>
+    <div *ngIf="true" [@slideInLeftOnEnter] class="textbox">
+        <h2>About the app</h2>
+        <p>The Student project database is a SPA built as a course project during the Angular course @SoftUni in February/March 2024.</p>
+        <p>The app has educational and demo purposes only. It solely aims to showcase the learnt techniques in using the Angular framework to build interactive web applications.</p>
+        <p>Back-end technologies are outside of the course scope. The app is intended to use a slightly modified RESTful API provided and built by the SoftUni academy for the workshop exercises.</p>
+        <p>HTML/CSS are outside of the course scope. Futhermore, they're part of the next course in the SoftUni academy learning path. The SPDB app is built with only basic knowledge and little experience in HTML/CSS. Bear with the basic and non-responsive design.</p>
+        <p>Enjoy using the app!</p>
+    </div>
+    <div *ngIf="true" [@slideInRightOnEnter] class="logo">
+        <img class="logo-image" src="../../../assets/logo-no-background.svg" alt="logo image">
+    </div>
 </div>

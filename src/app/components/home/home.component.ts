@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit{
 
   public ngOnInit() {
     setTimeout( () => this.showLastSlogan = true, 4000);
-    setTimeout( () => this.showJoinButton = true, 7000);
+    setTimeout( () => this.showJoinButton = true, 6500);
   }
 }

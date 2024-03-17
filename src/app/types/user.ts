@@ -9,3 +9,9 @@ export interface User {
     updatedAt: string;
     __v: number;
 }
+
+export interface AuthUser {
+    username: string;
+    email: string;
+    id: string;
+}

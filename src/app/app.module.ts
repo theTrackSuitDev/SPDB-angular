@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProjectsModule } from './modules/projects/projects.module';
+import { UserModule } from './modules/user/user.module';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { ProjectsModule } from './modules/projects/projects.module';
     FontAwesomeModule,
     HttpClientModule,
     ProjectsModule,
+    UserModule,
     AppRoutingModule
   ],
   providers: [],

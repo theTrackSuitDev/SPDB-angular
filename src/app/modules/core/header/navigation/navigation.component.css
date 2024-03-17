@@ -26,10 +26,9 @@
     color: #0262C2;
 }
 
-svg.title {
-    position: absolute;
-    left: 50%;
-    margin-left: -210px
+a.title-link {
+    display: flex;
+    margin-right: 15%;
 }
 
 a.logo {

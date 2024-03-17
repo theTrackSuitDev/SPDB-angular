@@ -1,6 +1,8 @@
 .nav-tabs {
     background-color: #0262C2;
     border: 0;
+    position: absolute;
+    right: 5px;
 }
 
 .nav-link {
@@ -11,7 +13,7 @@
 
 .header-bar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     height: 65px;
     border: none;
@@ -28,7 +30,6 @@
 
 a.title-link {
     display: flex;
-    margin-right: 15%;
 }
 
 a.logo {

@@ -1,3 +1,18 @@
 <div class="login">
-    <p>login works!</p>
+    <form class="login-form">
+        <h3>Login</h3>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary login-btn">Submit</button>
+    </form>
+    <div class="register-option">
+        You don't have an account yet?
+        <a routerLink="/register">Register now!</a>
+    </div>
 </div>

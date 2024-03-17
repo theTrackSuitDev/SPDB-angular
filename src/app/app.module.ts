@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProjectsModule } from './modules/projects/projects.module';
 
 
 @NgModule({
@@ -31,9 +32,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     NgbModule,
     BrowserAnimationsModule,
     NgxTypedWriterModule,
-    AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ProjectsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

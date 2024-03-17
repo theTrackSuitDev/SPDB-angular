@@ -4,6 +4,8 @@ import { AddProjectComponent } from './add-project/add-project.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { ProjectRoutingModule } from './project-routing.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +17,9 @@ import { EditProjectComponent } from './edit-project/edit-project.component';
     EditProjectComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ProjectRoutingModule
   ]
 })
 export class ProjectsModule { }

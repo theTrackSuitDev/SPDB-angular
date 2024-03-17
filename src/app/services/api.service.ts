@@ -15,9 +15,9 @@ export class ApiService {
     return this.http.get<Project[]>(`${environment.apiUrl}/themes`);
   }
 
-  createProject(projectName: string, description: string, imageUrl: string, videoUrl: string) {
+  createProject(projectName: string, technology: string, description: string, imageUrl: string, videoUrl: string) {
     const { apiUrl } = environment;
-    const payload = { projectName, description, imageUrl, videoUrl };
+    const payload = { projectName, technology, description, imageUrl, videoUrl };
 
     return this.http.post<Project>(`${apiUrl}/themes`, payload);
   }

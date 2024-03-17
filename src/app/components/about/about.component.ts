@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { slideInLeftOnEnterAnimation, slideInRightOnEnterAnimation } from 'angular-animations';
+import { slideInRightOnEnterAnimation } from 'angular-animations';
 
 
 @Component({
@@ -7,7 +7,6 @@ import { slideInLeftOnEnterAnimation, slideInRightOnEnterAnimation } from 'angul
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
   animations: [
-    slideInLeftOnEnterAnimation(),
     slideInRightOnEnterAnimation()
   ]
 })

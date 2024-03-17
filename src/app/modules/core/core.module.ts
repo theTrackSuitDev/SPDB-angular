@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavigationComponent } from './header/navigation/navigation.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     CommonModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,

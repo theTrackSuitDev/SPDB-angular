@@ -15,27 +15,27 @@
         </svg>
     </a>
 
-    <ul *ngIf="true" [@fadeInRightOnEnter] ngbNav #nav="ngbNav" class="nav-tabs">
-        <li ngbNavItem>
+    <ul *ngIf="true" [@fadeInRightOnEnter] [(activeId)]="active" ngbNav #nav="ngbNav" class="nav-tabs">
+        <li [ngbNavItem] = "'/'">
             <a ngbNavLink class="nav-link" routerLink="/">Home</a>
         </li>
-        <li ngbNavItem>
+        <li [ngbNavItem] = "'/projects'">
             <a ngbNavLink class="nav-link" routerLink="/projects">All Projects</a>
         </li>
-        <li *ngIf="isLogged" ngbNavItem>
+        <li *ngIf="isLogged" [ngbNavItem] = "'/add-project'">
             <a ngbNavLink class="nav-link" routerLink="/add-project">Add Project</a>
         </li>
-        <li *ngIf="!isLogged" ngbNavItem>
+        <li *ngIf="!isLogged" [ngbNavItem] = "'/login'">
             <a ngbNavLink class="nav-link" routerLink="/login">Login</a>
         </li>
-        <li *ngIf="!isLogged" ngbNavItem>
+        <li *ngIf="!isLogged" [ngbNavItem] = "'/register'">
             <a ngbNavLink class="nav-link" routerLink="/register">Register</a>
         </li>
-        <li *ngIf="isLogged" ngbNavItem>
-            <a class="nav-link" routerLink="/logout">Logout</a>
-        </li>
-        <li ngbNavItem>
+        <li [ngbNavItem] = "'/about'">
             <a ngbNavLink class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li *ngIf="isLogged" [ngbNavItem] = "'/logout'">
+            <a class="nav-link" routerLink="/logout">Logout</a>
         </li>
     </ul>
 </div>

@@ -23,7 +23,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavigationComponent
   ]
 })
 export class CoreModule { }

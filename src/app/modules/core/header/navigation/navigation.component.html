@@ -23,7 +23,7 @@
             <a ngbNavLink class="nav-link" routerLink="/projects">All Projects</a>
         </li>
         <li *ngIf="isLogged" [ngbNavItem] = "'/add-project'">
-            <a ngbNavLink class="nav-link" routerLink="/add-project">Add Project</a>
+            <a ngbNavLink class="nav-link" routerLink="/projects/add">Add Project</a>
         </li>
         <li *ngIf="!isLogged" [ngbNavItem] = "'/login'">
             <a ngbNavLink class="nav-link" routerLink="/login">Login</a>

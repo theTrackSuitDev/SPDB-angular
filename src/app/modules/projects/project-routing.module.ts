@@ -10,6 +10,7 @@ const routes: Routes = [
     path: 'projects',
     children: [
       { path: '', pathMatch: 'full', component: AllProjectsComponent },
+      { path: 'add', component: AddProjectComponent },
       { path: ':projectId', component: ProjectDetailsComponent },
       {
         path: 'edit',
@@ -18,10 +19,6 @@ const routes: Routes = [
         ],
       }
     ],
-  },
-  {
-    path: 'add-project',
-    component: AddProjectComponent
   }
 ];
 

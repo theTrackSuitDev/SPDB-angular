@@ -1,17 +1,30 @@
 <div class="login">
-    <form class="login-form">
+    <form *ngIf="true" [@fadeInRightOnEnter] class="login-form" [formGroup]="form" (ngSubmit)="login()">
         <h3>Login</h3>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
         </div>
+        <ng-container *ngIf="form.get('email')?.touched">          
+            <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                Email is required!
+            </p>
+            <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">
+                Invalid email!
+            </p>
+        </ng-container>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password">
         </div>
-        <button type="submit" class="btn btn-primary login-btn">Submit</button>
+        <ng-container *ngIf="form.get('password')?.touched">          
+            <p class="error" *ngIf="form.get('password')?.errors?.['required']">
+                Password is required!
+            </p>
+        </ng-container>
+        <button [disabled]="form.invalid" class="btn btn-primary login-btn">Submit</button>
     </form>
-    <div class="register-option">
+    <div *ngIf="true" [@fadeInRightOnEnter] class="register-option">
         You don't have an account yet?
         <a routerLink="/register">Register now!</a>
     </div>

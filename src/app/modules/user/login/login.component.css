@@ -31,11 +31,21 @@
     background-color: #0262C2;
 }
 
-.login-btn:hover {
+.login-btn:not(:disabled):hover {
     background-color: #DEE5ED;
     color: #0262C2;
 }
 
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: unset;
+}
+
 h3 {
     padding-bottom: 3%;
+}
+
+.error {
+    font-size: small;
+    color: red;
 }

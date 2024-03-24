@@ -1,3 +1,62 @@
 <div class="register">
-    <p>register works!</p>
+    <form *ngIf="true" [@fadeInRightOnEnter] class="register-form" [formGroup]="form" (ngSubmit)="register()">
+        <h3>Register</h3>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+        </div>
+        <ng-container *ngIf="form.get('email')?.touched">          
+            <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                Email is required!
+            </p>
+            <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">
+                Invalid email!
+            </p>
+        </ng-container>
+
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" formControlName="username">
+        </div>
+        <ng-container *ngIf="form.get('username')?.touched">          
+            <p class="error" *ngIf="form.get('username')?.errors?.['required']">
+                Username is required!
+            </p>
+            <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+                Username should be at least 4 characters!
+            </p>
+        </ng-container>
+
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="****" formControlName="password">
+        </div>
+        <ng-container *ngIf="form.get('password')?.touched">          
+            <p class="error" *ngIf="form.get('password')?.errors?.['required']">
+                Password is required!
+            </p>
+            <p class="error" *ngIf="form.get('password')?.errors?.['minlength']">
+                Password should be at least 4 characters!
+            </p>
+        </ng-container>
+
+
+        <div class="form-group">
+            <label for="rePassword">Repeat password</label>
+            <input type="password" class="form-control" id="rePassword" placeholder="****" formControlName="rePassword">
+        </div>
+        <ng-container *ngIf="form.get('rePassword')?.dirty">          
+            <p class="error" *ngIf="form?.errors?.['passMatchValidator']">
+                Passwords do not match!
+            </p>
+        </ng-container>
+
+        <button [disabled]="form.invalid" class="btn btn-primary register-btn">Submit</button>
+    </form>
+    <div *ngIf="true" [@fadeInRightOnEnter] class="login-option">
+        You already have an account?
+        <a routerLink="/login">Log in here!</a>
+    </div>
 </div>

@@ -5,6 +5,46 @@
     height: 81vh;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     color: #4F4F4F;
+}
+.register-form {
+    border: #4F4F4F solid 1px;
+    padding: 1.5%;
+    border-radius: 7%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-option {
+    margin-top: 1%;
+}
+
+.btn {
+    margin-top: 8%;
+}
+
+.register-btn {
+    border-color: #0262C2;
+    background-color: #0262C2;
+}
+
+.register-btn:not(:disabled):hover {
+    background-color: #DEE5ED;
+    color: #0262C2;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: unset;
+}
+
+h3 {
+    padding-bottom: 3%;
+}
+
+.error {
+    font-size: small;
+    color: red;
 }

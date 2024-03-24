@@ -15,7 +15,7 @@ import { filter } from 'rxjs';
 })
 export class NavigationComponent implements OnInit{
   active = "/";
-  isLogged = false;
+  isLogged = true;
 
   constructor (private router: Router) { }
 
@@ -24,7 +24,6 @@ export class NavigationComponent implements OnInit{
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event) => {
         this.active = (event as NavigationEnd).url;
-        console.log(this.active);  
     });
   }
 

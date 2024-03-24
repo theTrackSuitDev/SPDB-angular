@@ -6,6 +6,8 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { ProjectRoutingModule } from './project-routing.module';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -19,7 +21,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    ProjectRoutingModule
+    ProjectRoutingModule,
+    ReactiveFormsModule,
+    NgbModule
   ]
 })
 export class ProjectsModule { }

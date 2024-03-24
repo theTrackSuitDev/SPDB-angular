@@ -1,8 +1,8 @@
 .home {
     background-color: #DEE5ED;
     display: flex;
-    margin-top: 65px;
-    height: calc(100vh - 165px);
+    margin-top: 7vh;
+    height: 81vh;
 }
 
 .logo-wrapper {
@@ -44,7 +44,7 @@ aside {
 .join {
     font-size: 30px;
     margin-left: 350px;
-    margin-top: 40px;
+    margin-top: 35px;
     border-color: #0262C2;
     background-color: #0262C2;
 }

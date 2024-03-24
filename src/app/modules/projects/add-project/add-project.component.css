@@ -1,8 +1,8 @@
 .add-project {
     background-color: #DEE5ED;
     display: flex;
-    margin-top: 65px;
-    height: calc(100vh - 165px);
+    margin-top: 7vh;
+    height: 81vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;

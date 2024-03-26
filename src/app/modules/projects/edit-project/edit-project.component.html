@@ -56,7 +56,7 @@
             <label for="imageUrl">Project Image</label>
             <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" formControlName="imageUrl">
         </div>
-        <ng-container *ngIf="form.get('imageUrl')?.dirty">          
+        <ng-container *ngIf="form.get('imageUrl')?.touched">          
             <p class="error" *ngIf="form.get('imageUrl')?.errors?.['required']">
                 Image Url is required!
             </p>
@@ -70,7 +70,7 @@
             <label for="videoUrl">Project Video</label>
             <input type="text" class="form-control" id="videoUrl" placeholder="YouTube URL(optional)" formControlName="videoUrl">
         </div>
-        <ng-container *ngIf="form.get('videoUrl')?.dirty">          
+        <ng-container *ngIf="form.get('videoUrl')?.touched">          
             <p class="error" *ngIf="form.get('videoUrl')?.errors?.['videoUrlValidator']">
                 Only valid YouTube URLs are allowed.
             </p>
@@ -80,7 +80,7 @@
             <label for="gitHubRepo">GutHub Repository</label>
             <input type="text" class="form-control" id="gitHubRepo" placeholder="GitHub URL(optional)" formControlName="gitHubRepo">
         </div>
-        <ng-container *ngIf="form.get('gitHubRepo')?.dirty">          
+        <ng-container *ngIf="form.get('gitHubRepo')?.touched">          
             <p class="error" *ngIf="form.get('gitHubRepo')?.errors?.['gitUrlValidator']">
                 Provide a valid GitHub URL.
             </p>

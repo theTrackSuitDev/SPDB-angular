@@ -5,6 +5,59 @@
     height: 81vh;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     color: #4F4F4F;
+}
+
+.edit-project-form {
+    border: #4F4F4F solid 1px;
+    padding: 1.5%;
+    border-radius: 3%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-option {
+    margin-top: 1%;
+}
+
+.btn {
+    margin-top: 8%;
+}
+
+.edit-project-btn {
+    border-color: #0262C2;
+    background-color: #0262C2;
+}
+
+.edit-project-btn:not(:disabled):hover {
+    background-color: #DEE5ED;
+    color: #0262C2;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    pointer-events: unset;
+}
+
+h3 {
+    padding-bottom: 3%;
+}
+
+.error {
+    font-size: small;
+    color: red;
+}
+
+textarea {
+    max-height:75px;
+}
+
+.select {
+    width: 100%;
+}
+
+p {
+    margin: 0;
 }

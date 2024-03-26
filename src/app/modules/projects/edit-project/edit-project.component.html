@@ -1,3 +1,91 @@
 <div class="edit-project">
-    <p>edit-project works!</p>
+    <form *ngIf="true" [@fadeInRightOnEnter] class="edit-project-form" [formGroup]="form" (ngSubmit)="editProject()">
+        <h3>Edit project</h3>
+        <div class="form-group">
+            <label for="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" placeholder="Project Name" formControlName="projectName">
+        </div>
+        <ng-container *ngIf="form.get('projectName')?.touched">          
+            <p class="error" *ngIf="form.get('projectName')?.errors?.['required']">
+                Project Name is required!
+            </p>
+            <p class="error" *ngIf="form.get('projectName')?.errors?.['minlength']">
+                Name should be at least 4 characters!
+            </p>
+            <p class="error" *ngIf="form.get('projectName')?.errors?.['maxlength']">
+                Name should be no more than 10 characters!
+            </p>
+        </ng-container>
+
+
+        <div class="form-group select">
+            <label for="technology">Technology Used</label>
+            <select class="form-select" formControlName="technology">
+                <option value="" disabled selected>Select Technology</option>
+                <option value="ReactJS">React</option>
+                <option value="AngularJS">Angular</option>
+                <option value="VueJS">Vue</option>
+                <option value="Other">Other</option>
+              </select>
+        </div>
+        <ng-container *ngIf="form.get('technology')?.touched">          
+            <p class="error" *ngIf="form.get('technology')?.errors?.['required']">
+                Technology is required!
+            </p>
+        </ng-container>
+
+
+        <div class="form-group">
+            <label for="description">Project Description</label>
+            <textarea type="text" class="form-control" id="description" placeholder="Description" formControlName="description"></textarea>
+        </div>
+        <ng-container *ngIf="form.get('description')?.touched">          
+            <p class="error" *ngIf="form.get('description')?.errors?.['required']">
+                Description is required!
+            </p>
+            <p class="error" *ngIf="form.get('description')?.errors?.['minlength']">
+                Description should be at least 10 characters!
+            </p>
+            <p class="error" *ngIf="form.get('description')?.errors?.['maxlength']">
+                Description should be no more than 50 characters!
+            </p>
+        </ng-container>
+
+
+        <div class="form-group">
+            <label for="imageUrl">Project Image</label>
+            <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" formControlName="imageUrl">
+        </div>
+        <ng-container *ngIf="form.get('imageUrl')?.dirty">          
+            <p class="error" *ngIf="form.get('imageUrl')?.errors?.['required']">
+                Image Url is required!
+            </p>
+            <p class="error" *ngIf="form.get('imageUrl')?.errors?.['imageUrlValidator']">
+                Only direct image URLs are allowed. 
+            </p>
+        </ng-container>
+
+
+        <div class="form-group">
+            <label for="videoUrl">Project Video</label>
+            <input type="text" class="form-control" id="videoUrl" placeholder="YouTube URL(optional)" formControlName="videoUrl">
+        </div>
+        <ng-container *ngIf="form.get('videoUrl')?.dirty">          
+            <p class="error" *ngIf="form.get('videoUrl')?.errors?.['videoUrlValidator']">
+                Only valid YouTube URLs are allowed.
+            </p>
+        </ng-container>
+
+        <div class="form-group">
+            <label for="gitHubRepo">GutHub Repository</label>
+            <input type="text" class="form-control" id="gitHubRepo" placeholder="GitHub URL(optional)" formControlName="gitHubRepo">
+        </div>
+        <ng-container *ngIf="form.get('gitHubRepo')?.dirty">          
+            <p class="error" *ngIf="form.get('gitHubRepo')?.errors?.['gitUrlValidator']">
+                Provide a valid GitHub URL.
+            </p>
+        </ng-container>
+
+        <button class="btn btn-primary edit-project-btn">Submit</button>
+    </form>
 </div>

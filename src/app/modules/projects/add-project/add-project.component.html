@@ -1,8 +1,8 @@
 <div class="add-project">
     <form *ngIf="true" [@fadeInRightOnEnter] class="add-project-form" [formGroup]="form" (ngSubmit)="addProject()">
-        <h3>Add new project</h3>
+        <h3>Add a project</h3>
         <div class="form-group">
-            <label for="projectName">Project Name</label>
+            <label for="projectName">Project Name<span class="required-note">*</span></label>
             <input type="text" class="form-control" id="projectName" placeholder="Project Name" formControlName="projectName">
         </div>
         <ng-container *ngIf="form.get('projectName')?.touched">          
@@ -18,8 +18,8 @@
         </ng-container>
 
 
-        <div class="form-group">
-            <label for="technology">Technology Used</label>
+        <div class="form-group select">
+            <label for="technology">Technology Used<span class="required-note">*</span></label>
             <select class="form-select" formControlName="technology">
                 <option value="" disabled selected>Select Technology</option>
                 <option value="ReactJS">React</option>
@@ -36,7 +36,7 @@
 
 
         <div class="form-group">
-            <label for="description">Project Description</label>
+            <label for="description">Project Description<span class="required-note">*</span></label>
             <textarea type="text" class="form-control" id="description" placeholder="Description" formControlName="description"></textarea>
         </div>
         <ng-container *ngIf="form.get('description')?.touched">          
@@ -53,10 +53,10 @@
 
 
         <div class="form-group">
-            <label for="imageUrl">Project Image</label>
+            <label for="imageUrl">Project Image<span class="required-note">*</span></label>
             <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" formControlName="imageUrl">
         </div>
-        <ng-container *ngIf="form.get('imageUrl')?.touched">          
+        <ng-container *ngIf="form.get('imageUrl')?.dirty">          
             <p class="error" *ngIf="form.get('imageUrl')?.errors?.['required']">
                 Image Url is required!
             </p>
@@ -68,9 +68,9 @@
 
         <div class="form-group">
             <label for="videoUrl">Project Video</label>
-            <input type="text" class="form-control" id="videoUrl" placeholder="Optional YouTube URL" formControlName="videoUrl">
+            <input type="text" class="form-control" id="videoUrl" placeholder="YouTube URL(optional)" formControlName="videoUrl">
         </div>
-        <ng-container *ngIf="form.get('videoUrl')?.touched">          
+        <ng-container *ngIf="form.get('videoUrl')?.dirty">          
             <p class="error" *ngIf="form.get('videoUrl')?.errors?.['videoUrlValidator']">
                 Only valid YouTube URLs are allowed.
             </p>
@@ -78,18 +78,16 @@
 
         <div class="form-group">
             <label for="gitHubRepo">GutHub Repository</label>
-            <input type="text" class="form-control" id="gitHubRepo" placeholder="GitHub Repo URL" formControlName="gitHubRepo">
+            <input type="text" class="form-control" id="gitHubRepo" placeholder="GitHub URL(optional)" formControlName="gitHubRepo">
         </div>
-        <ng-container *ngIf="form.get('gitHubRepo')?.touched">          
-            <p class="error" *ngIf="form.get('gitHubRepo')?.errors?.['required']">
-                GitHub Repo URL is required!
-            </p>
-            <p class="error" *ngIf="form.get('gitHubRepo')?.errors?.['pattern']">
+        <ng-container *ngIf="form.get('gitHubRepo')?.dirty">          
+            <p class="error" *ngIf="form.get('gitHubRepo')?.errors?.['gitUrlValidator']">
                 Provide a valid GitHub URL.
             </p>
         </ng-container>
 
-        <button [disabled]="form.invalid" class="btn btn-primary add-project-btn">Submit</button>
+        <p class="required-instruction">*Required</p>
+        <button class="btn btn-primary add-project-btn">Submit</button>
     </form>
 
 </div>

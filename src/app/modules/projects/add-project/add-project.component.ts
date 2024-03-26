@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { fadeInRightOnEnterAnimation } from 'angular-animations';
 import { imageUrlValidator } from '../../shared/utils/imageUrlValidator';
 import { videoUrlValidator } from '../../shared/utils/videoUrlValidator';
+import { gitUrlValidator } from '../../shared/utils/gitUrlValidator';
 
 @Component({
   selector: 'app-add-project',
@@ -19,10 +20,14 @@ export class AddProjectComponent {
     description: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(50)]],
     imageUrl: ['', [Validators.required, imageUrlValidator()]],
     videoUrl: ['', [videoUrlValidator()]],
-    gitHubRepo: ['', [Validators.required, Validators.pattern(/^https?:\/\/github\.com\//)]],
+    gitHubRepo: ['', [gitUrlValidator()]],
   });
 
   addProject():void {
+    Object.keys(this.form.controls).forEach(key => {
+      this.form.get(key)?.markAllAsTouched();
+    });
+
     if (this.form.invalid) {
       return;
     }

@@ -52,4 +52,22 @@ h3 {
 
 textarea {
     max-height:75px;
-  }
+}
+
+.select {
+    width: 100%;
+}
+
+.required-note {
+    color: red;
+}
+
+.required-instruction {
+    font-size: small;
+    color: red;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+}

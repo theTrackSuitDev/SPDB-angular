@@ -44,10 +44,10 @@
 
 
         <div class="form-group">
-            <label for="rePassword">Repeat password</label>
-            <input type="password" class="form-control" id="rePassword" placeholder="****" formControlName="rePassword">
+            <label for="repeatPassword">Repeat password</label>
+            <input type="password" class="form-control" id="repeatPassword" placeholder="****" formControlName="repeatPassword">
         </div>
-        <ng-container *ngIf="form.get('rePassword')?.dirty">          
+        <ng-container *ngIf="form.get('repeatPassword')?.dirty">          
             <p class="error" *ngIf="form?.errors?.['passMatchValidator']">
                 Passwords do not match!
             </p>

@@ -37,3 +37,7 @@ a.logo {
     position: absolute;
     left: 5px;
 }
+
+.logout:hover {
+    cursor: pointer;
+}

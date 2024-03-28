@@ -34,8 +34,8 @@
         <li [ngbNavItem] = "'/about'">
             <a ngbNavLink class="nav-link" routerLink="/about">About</a>
         </li>
-        <li *ngIf="isLogged" [ngbNavItem] = "'/logout'">
-            <a class="nav-link" routerLink="/logout">Logout</a>
+        <li class="logout" *ngIf="isLogged" [ngbNavItem] = "'/logout'" (click) = "logout()">
+            <a class="nav-link">Logout</a>
         </li>
     </ul>
 </div>

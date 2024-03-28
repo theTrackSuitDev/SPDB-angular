@@ -37,4 +37,8 @@ export class UserService {
 
     return this.http.post<AuthUser>("/api/login", payload);
   }
+
+  logout() {
+    return this.http.post("/api/logout", {});
+  }
 }

@@ -31,4 +31,10 @@ export class UserService {
 
     return this.http.post<AuthUser>("/api/register", payload);
   }
+
+  login(email: string, password: string) {
+    const payload = { email, password };
+
+    return this.http.post<AuthUser>("/api/login", payload);
+  }
 }

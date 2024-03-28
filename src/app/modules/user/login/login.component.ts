@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { fadeInRightOnEnterAnimation } from 'angular-animations';
 import { emailValidator } from '../../shared/utils/emailValidator';
+import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { emailValidator } from '../../shared/utils/emailValidator';
   animations: [fadeInRightOnEnterAnimation()],
 })
 export class LoginComponent {
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) {}
 
   form = this.formBuilder.group({
     email: ['', [Validators.required, emailValidator()]],
@@ -22,6 +24,8 @@ export class LoginComponent {
       return;
     }
 
-    console.log(this.form.value);   
+    const { email, password } = this.form.value;
+
+    this.userService.login(email!, password!).subscribe(() => this.router.navigate(["/projects"])); 
   }
 }

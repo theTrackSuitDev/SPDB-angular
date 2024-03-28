@@ -1,7 +1,7 @@
 import { ValidatorFn } from "@angular/forms";
 
 export function gitUrlValidator(): ValidatorFn {
-    const pattern = /^https?:\/\/github\.com\//g;
+    const pattern = /^https?:\/\/github\.com\//;
 
     return (control) => {
         const isValid = control.value === '' || pattern.test(control.value);

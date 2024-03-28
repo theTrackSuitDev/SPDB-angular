@@ -61,18 +61,18 @@
                 Image Url is required!
             </p>
             <p class="error" *ngIf="form.get('imageUrl')?.errors?.['imageUrlValidator']">
-                Only direct image URLs are allowed. 
+                Invalid URL or leading/trailing white spaces.
             </p>
         </ng-container>
 
 
         <div class="form-group">
             <label for="videoUrl">Project Video</label>
-            <input type="text" class="form-control" id="videoUrl" placeholder="YouTube URL(optional)" formControlName="videoUrl">
+            <input type="text" class="form-control" id="videoUrl" placeholder="Full YouTube URL(optional)" formControlName="videoUrl">
         </div>
         <ng-container *ngIf="form.get('videoUrl')?.touched">          
             <p class="error" *ngIf="form.get('videoUrl')?.errors?.['videoUrlValidator']">
-                Only valid YouTube URLs are allowed.
+              Invalid YouTube URL or leading/trailing white spaces.
             </p>
         </ng-container>
 

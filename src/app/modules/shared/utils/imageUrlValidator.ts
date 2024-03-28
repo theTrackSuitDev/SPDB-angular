@@ -1,7 +1,7 @@
 import { ValidatorFn } from "@angular/forms";
 
 export function imageUrlValidator(): ValidatorFn {
-    const pattern = /(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg|webp))/i;
+    const pattern = /^(http)?s?:?(\/\/[^"']*\.(?:png|jpg|jpeg|gif|png|svg|webp))$/i;
 
     return (control) => {
         const isValid = control.value === '' || pattern.test(control.value);

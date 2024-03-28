@@ -16,6 +16,8 @@ import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { UserModule } from './modules/user/user.module';
+import { appInterceptorProvider } from './app.interceptor';
+
 
 
 @NgModule({
@@ -39,7 +41,7 @@ import { UserModule } from './modules/user/user.module';
     UserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

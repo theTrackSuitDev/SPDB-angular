@@ -49,3 +49,7 @@ h3 {
     font-size: small;
     color: red;
 }
+
+p {
+    margin: 0;
+}

@@ -21,6 +21,9 @@
             <p class="error" *ngIf="form.get('password')?.errors?.['required']">
                 Password is required!
             </p>
+            <p class="error" *ngIf="form.get('password')?.errors?.['pattern']">
+                Only letters and/or numbers are allowed!
+            </p>
         </ng-container>
         <button [disabled]="form.invalid" class="btn btn-primary login-btn">Submit</button>
     </form>

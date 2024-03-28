@@ -27,12 +27,14 @@ export class UserService {
   }
 
   register(email: string, username: string, password: string, repeatPassword: string) {
+    email = email.trim();
     const payload = { email, username, password, repeatPassword };
 
     return this.http.post<AuthUser>("/api/register", payload);
   }
 
   login(email: string, password: string) {
+    email = email.trim();
     const payload = { email, password };
 
     return this.http.post<AuthUser>("/api/login", payload);

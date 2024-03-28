@@ -16,7 +16,7 @@ export class LoginComponent {
 
   form = this.formBuilder.group({
     email: ['', [Validators.required, emailValidator()]],
-    password: ['', [Validators.required]]
+    password: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9]+$/)]]
   })
 
   login():void {

@@ -23,6 +23,9 @@
             <p class="error" *ngIf="form.get('username')?.errors?.['required']">
                 Username is required!
             </p>
+            <p class="error" *ngIf="form.get('username')?.errors?.['pattern']">
+                Only letters and/or numbers are allowed!
+            </p>
             <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
                 Username should be at least 4 characters!
             </p>
@@ -36,6 +39,9 @@
         <ng-container *ngIf="form.get('password')?.touched">          
             <p class="error" *ngIf="form.get('password')?.errors?.['required']">
                 Password is required!
+            </p>
+            <p class="error" *ngIf="form.get('password')?.errors?.['pattern']">
+                Only letters and/or numbers are allowed!
             </p>
             <p class="error" *ngIf="form.get('password')?.errors?.['minlength']">
                 Password should be at least 4 characters!

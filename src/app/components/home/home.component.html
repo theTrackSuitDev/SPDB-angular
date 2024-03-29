@@ -26,7 +26,10 @@
 
 
         <div class="join-wrapper">
-            <a *ngIf="showJoinButton" [@flipInXOnEnter] routerLink="/register" class="btn btn-primary btn-lg active join" role="button" aria-pressed="true">Join now!</a>
+            <ng-container *ngIf="showJoinButton">          
+            <a *ngIf="!isLogged" [@flipInXOnEnter] routerLink="/register" class="btn btn-primary btn-lg active join" role="button" aria-pressed="true">Join now!</a>
+            <a *ngIf="isLogged" [@flipInXOnEnter] routerLink="/projects" class="btn btn-primary btn-lg active join" role="button" aria-pressed="true">Explore!</a>
+            </ng-container>
         </div>
 
     </aside>

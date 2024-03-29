@@ -1,0 +1,12 @@
+div.spinner-border {
+    color: #0262C2;
+}
+
+div.loader-screen {
+    background-color: #DEE5ED;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

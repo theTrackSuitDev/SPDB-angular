@@ -16,7 +16,9 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NavigationComponent implements OnInit{
   active = "/";
-  isLogged = true;
+  get isLogged(): boolean {
+    return this.userService.isLogged;
+  }
 
   constructor (private router: Router, private userService: UserService) { }
 

@@ -17,6 +17,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { UserModule } from './modules/user/user.module';
 import { appInterceptorProvider } from './app.interceptor';
+import { AuthComponent } from './components/auth/auth.component';
 
 
 
@@ -26,7 +27,8 @@ import { appInterceptorProvider } from './app.interceptor';
     MainComponent,
     HomeComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

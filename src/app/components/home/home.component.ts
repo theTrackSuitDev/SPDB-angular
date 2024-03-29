@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeInLeftOnEnterAnimation, flipInXOnEnterAnimation } from 'angular-animations';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -12,10 +13,17 @@ import { fadeInLeftOnEnterAnimation, flipInXOnEnterAnimation } from 'angular-ani
   ]
 })
 export class HomeComponent implements OnInit{
-  public showLastSlogan: boolean = false;
-  public showJoinButton: boolean = false;
 
-  public ngOnInit() {
+  constructor(private userService: UserService) {}
+
+  get isLogged(): boolean {
+    return this.userService.isLogged;
+  }
+
+  showLastSlogan: boolean = false;
+  showJoinButton: boolean = false;
+
+  ngOnInit() {
     setTimeout( () => this.showLastSlogan = true, 4000);
     setTimeout( () => this.showJoinButton = true, 6500);
   }

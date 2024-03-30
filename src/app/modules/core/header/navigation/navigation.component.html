@@ -19,11 +19,11 @@
         <li [ngbNavItem] = "'/'">
             <a ngbNavLink class="nav-link" routerLink="/">Home</a>
         </li>
-        <li [ngbNavItem] = "'/projects'">
-            <a ngbNavLink class="nav-link" routerLink="/projects">All Projects</a>
+        <li [ngbNavItem] = "'/content/projects'">
+            <a ngbNavLink class="nav-link" routerLink="/content/projects">All Projects</a>
         </li>
-        <li *ngIf="isLogged" [ngbNavItem] = "'/projects/add'">
-            <a ngbNavLink class="nav-link" routerLink="/projects/add">Add Project</a>
+        <li *ngIf="isLogged" [ngbNavItem] = "'/content/projects/add'">
+            <a ngbNavLink class="nav-link" routerLink="/content/projects/add">Add Project</a>
         </li>
         <li *ngIf="!isLogged" [ngbNavItem] = "'/login'">
             <a ngbNavLink class="nav-link" routerLink="/login">Login</a>

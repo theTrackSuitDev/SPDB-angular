@@ -6,6 +6,10 @@ import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
+  {
+    path: 'content',
+    loadChildren: () => import('./modules/projects/projects.module').then((m) => m.ProjectsModule),
+  },
   { path: 'about', component: AboutComponent },
   { path: '**', redirectTo: '/404' },
   { path: '404', component: NotFoundComponent }

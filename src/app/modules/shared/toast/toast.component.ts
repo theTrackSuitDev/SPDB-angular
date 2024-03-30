@@ -22,13 +22,11 @@ export class ToastComponent  implements OnInit{
         this.isError = true;
         if (error.error.err) {
           this.errorMessage = error.error.err.message;
-          if (this.errorMessage === "jwt expired") {
-            this.errorMessage = "Invalid or expired session!"
-          }
-
+        } else if (error.error) {
+          this.errorMessage = error.error.message;
         } else {
           this.errorMessage = error.message;
-        }    
+        }
         
       }
       

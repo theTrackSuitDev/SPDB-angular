@@ -14,7 +14,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-// import { ProjectsModule } from './modules/projects/projects.module';
 import { UserModule } from './modules/user/user.module';
 import { appInterceptorProvider } from './app.interceptor';
 import { AuthComponent } from './components/auth/auth.component';
@@ -40,7 +39,6 @@ import { ToastComponent } from './modules/shared/toast/toast.component';
     NgxTypedWriterModule,
     FontAwesomeModule,
     HttpClientModule,
-    // ProjectsModule,
     UserModule,
     AppRoutingModule,
     ToastComponent

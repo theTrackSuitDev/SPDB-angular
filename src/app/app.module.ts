@@ -18,6 +18,7 @@ import { ProjectsModule } from './modules/projects/projects.module';
 import { UserModule } from './modules/user/user.module';
 import { appInterceptorProvider } from './app.interceptor';
 import { AuthComponent } from './components/auth/auth.component';
+import { ToastComponent } from './modules/shared/toast/toast.component';
 
 
 
@@ -41,7 +42,8 @@ import { AuthComponent } from './components/auth/auth.component';
     HttpClientModule,
     ProjectsModule,
     UserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastComponent
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent]

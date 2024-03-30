@@ -8,7 +8,7 @@ import { BehaviorSubject, Subscription, tap } from 'rxjs';
 })
 export class UserService implements OnDestroy{
   private user$$ = new BehaviorSubject<AuthUser | undefined>(undefined);
-  private user$ = this.user$$.asObservable();
+  public user$ = this.user$$.asObservable();
 
   userSubscription: Subscription;
   user: AuthUser | undefined;

@@ -1,0 +1,3 @@
+<ngb-toast *ngIf="isError" [animation]="true" [autohide]="true" [delay]="5000" (hidden)="isError=false">
+    {{errorMessage}}
+</ngb-toast>

@@ -1,0 +1,7 @@
+ngb-toast {
+    position: fixed;
+    right: 2%;
+    top: 10%;
+    background-color: rgb(255, 187, 199);
+    color: #4F4F4F;
+}

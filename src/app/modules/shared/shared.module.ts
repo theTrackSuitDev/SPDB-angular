@@ -3,18 +3,16 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderComponent } from './loader/loader.component';
 
-
-
 @NgModule({
   declarations: [
-    LoaderComponent
+    LoaderComponent,
   ],
   imports: [
     CommonModule,
     NgbModule
   ],
   exports: [
-    LoaderComponent
+    LoaderComponent,
   ]
 })
 export class SharedModule { }

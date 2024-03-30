@@ -4,18 +4,19 @@ import { AllProjectsComponent } from './all-projects/all-projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { loggedGuard } from 'src/app/guards/logged.guard';
 
 const routes: Routes = [
   {
     path: 'projects',
     children: [
       { path: '', pathMatch: 'full', component: AllProjectsComponent },
-      { path: 'add', component: AddProjectComponent },
-      { path: ':projectId', component: ProjectDetailsComponent },
+      { path: 'add', component: AddProjectComponent, canActivate: [loggedGuard] },
+      { path: ':projectId', component: ProjectDetailsComponent, canActivate: [loggedGuard] },
       {
         path: 'edit',
         children: [
-          { path: ':projectId', component: EditProjectComponent }
+          { path: ':projectId', component: EditProjectComponent, canActivate: [loggedGuard] }
         ],
       }
     ],

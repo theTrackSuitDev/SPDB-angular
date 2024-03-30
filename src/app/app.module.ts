@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,7 +44,7 @@ import { ToastComponent } from './modules/shared/toast/toast.component';
     AppRoutingModule,
     ToastComponent
   ],
-  providers: [appInterceptorProvider],
+  providers: [appInterceptorProvider, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

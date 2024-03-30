@@ -30,7 +30,7 @@ export class AppInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       catchError((error) => {
         if (error.status === 401 && error.url === `${apiUrl}/users/profile`) {         
-          this.router.navigate(['/']);
+          return [error];
         } else if (error.status === 403 && error.url === `${apiUrl}/users/profile`) {
           this.errorService.setError(error);
           this.router.navigate(['/login']);

@@ -20,7 +20,16 @@ export class ToastComponent  implements OnInit{
     this.errorService.apiError$.subscribe((error: any) => {
       if (error) {
         this.isError = true;
-        this.errorMessage = error.message;
+        if (error.error.err) {
+          this.errorMessage = error.error.err.message;
+          if (this.errorMessage === "jwt expired") {
+            this.errorMessage = "Invalid or expired session!"
+          }
+
+        } else {
+          this.errorMessage = error.message;
+        }    
+        
       }
       
     });

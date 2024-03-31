@@ -4,6 +4,8 @@ import { fadeInRightOnEnterAnimation } from 'angular-animations';
 import { imageUrlValidator } from '../../shared/utils/imageUrlValidator';
 import { videoUrlValidator } from '../../shared/utils/videoUrlValidator';
 import { gitUrlValidator } from '../../shared/utils/gitUrlValidator';
+import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-project',
@@ -12,7 +14,7 @@ import { gitUrlValidator } from '../../shared/utils/gitUrlValidator';
   animations: [fadeInRightOnEnterAnimation()],
 })
 export class AddProjectComponent {
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router) {}
 
   form = this.formBuilder.group({
     projectName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]],
@@ -32,7 +34,13 @@ export class AddProjectComponent {
       return;
     }
     
-    console.log(this.form.value);   
+    const { projectName, technology, description, imageUrl, videoUrl, gitHubRepo } = this.form.value;
+
+    this.apiService.createProject(projectName!, technology!, description!, imageUrl!, videoUrl!, gitHubRepo!)
+      .subscribe((newProject) => {
+        console.log(newProject);
+        this.router.navigate(["/content/projects"])
+      });
   }
 
 }

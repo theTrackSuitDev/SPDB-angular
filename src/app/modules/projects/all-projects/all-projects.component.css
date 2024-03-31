@@ -1,10 +1,68 @@
 .all-projects {
     background-color: #DEE5ED;
     display: flex;
+    flex-direction: column;
     margin-top: 7vh;
     height: 81vh;
+    align-items: center;
+    color: #4F4F4F;
+}
+
+div.cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div.project-card {
+    width: 20vw;
+    height: 50vh;
+    border: solid 1px;
+    border-color: #4F4F4F;
+    border-radius: 5%;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2%;
+    position: relative;
+}
+
+div.img-frame {
+    width: 100%;
+    display: flex;
+    align-items: end;
     justify-content: center;
-    color: #4F4F4F;
+}
+
+img {
+    object-fit: contain;
+    width: 80%;
+}
+
+.details {
+    font-size: 20px;
+    border-color: #0262C2;
+    background-color: #0262C2;
+    position: absolute;
+    bottom: 15%;
+}
+
+.details:hover {
+    background-color: #DEE5ED;
+    color: #0262C2;
+}
+
+.login-access {
+    font-size: 15px;
+    pointer-events: unset;
+    cursor: not-allowed;
+}
+
+span {
+    margin: 2%;
+}
+
+h2 {
+    margin: 5%;
 }

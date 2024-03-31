@@ -8,6 +8,7 @@ import { ProjectRoutingModule } from './project-routing.module';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     ProjectRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    SharedModule    
   ]
 })
 export class ProjectsModule { }

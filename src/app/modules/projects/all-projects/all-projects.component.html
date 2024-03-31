@@ -5,19 +5,28 @@
     </div>
 
     <span *ngIf="true" [@fadeInRightOnEnter]>
-        <h1 *ngIf="projects?.length != 0">All Projects</h1>
+        <h1 *ngIf="projects!.length !== 0">All Projects</h1>
     </span>
    
     <div *ngIf="true" [@fadeInRightOnEnter] class="cards-wrapper">
-        <div *ngFor="let project of projects" class="project-card">
-            <h3>{{project.projectName}}</h3>
-            <p>Developed by: {{project.userId.username}}</p>
-            <div class="img-frame">
-                <img src={{project.imageUrl}} alt="Project Image">
-            </div>
-            <a *ngIf="isLogged" routerLink="/content/projects/{{project._id}}" class="btn btn-primary details" role="button">Details</a>
-            <button *ngIf="!isLogged" class="btn btn-primary details login-access" disabled>Log in to access project details</button>
-        </div>
+        <table>
+            <tr *ngFor="let project of projects | slice: (page-1) * pageSize : page * pageSize">
+                <div class="project-card">
+                    <h3>{{project.projectName}}</h3>
+                    <p>Developed by: {{project.userId.username}}</p>
+                    <div class="img-frame">
+                        <img src={{project.imageUrl}} alt="Project Image">
+                    </div>
+                    <a *ngIf="isLogged" routerLink="/content/projects/{{project._id}}" class="btn btn-primary details" role="button">Details</a>
+                    <button *ngIf="!isLogged" class="btn btn-primary details login-access" disabled>Log in to access project details</button>
+                </div>
+            </tr>
+        </table>
+
+    </div>
+
+    <div *ngIf="true" [@fadeInRightOnEnter] class="pages">
+        <ngb-pagination *ngIf="projects!.length !== 0" [collectionSize]="projects!.length" [pageSize]="pageSize" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
     </div>
 
     <h2 *ngIf="projects?.length === 0">There are no added projects yet.</h2>

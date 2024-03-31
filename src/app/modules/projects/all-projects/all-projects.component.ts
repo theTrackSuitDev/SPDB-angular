@@ -15,6 +15,9 @@ export class AllProjectsComponent implements OnInit {
   projects: Project[] | null = [];
   isLoading: boolean = true;
 
+  pageSize = 3;
+  page = 1;
+
   constructor(private apiService: ApiService, private userService: UserService) {}
 
   get userId(): string {

@@ -26,7 +26,8 @@
     </div>
 
     <div *ngIf="true" [@fadeInRightOnEnter] class="pages">
-        <ngb-pagination *ngIf="projects!.length !== 0" [collectionSize]="projects!.length" [pageSize]="pageSize" [(page)]="page" [boundaryLinks]="true"></ngb-pagination>
+        <ngb-pagination *ngIf="projects!.length !== 0" [collectionSize]="projects!.length" [pageSize]="pageSize" [(page)]="page" [maxSize]="3"
+        [rotate]="true" [ellipses]="true" [boundaryLinks]="true"></ngb-pagination>
     </div>
 
     <h2 *ngIf="projects?.length === 0">There are no added projects yet.</h2>

@@ -17,7 +17,7 @@ export class AddProjectComponent {
   constructor(private formBuilder: FormBuilder, private apiService: ApiService, private router: Router) {}
 
   form = this.formBuilder.group({
-    projectName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(10)]],
+    projectName: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(15)]],
     technology: ['', [Validators.required]],
     description: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(50)]],
     imageUrl: ['', [Validators.required, imageUrlValidator()]],

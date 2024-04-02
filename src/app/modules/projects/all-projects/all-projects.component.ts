@@ -21,7 +21,7 @@ export class AllProjectsComponent implements OnInit {
   constructor(private apiService: ApiService, private userService: UserService) {}
 
   get userId(): string {
-    return this.userService.user?.id || '';
+    return this.userService.user?._id || '';
   }
 
   get isLogged(): boolean {

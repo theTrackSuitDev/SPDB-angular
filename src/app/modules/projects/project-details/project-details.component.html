@@ -1,3 +1,21 @@
 <div class="project-details">
-    <p>project-details works!</p>
+    <div *ngIf="isLoading">
+        <app-loader></app-loader>
+    </div>
+    <div *ngIf="!isLoading" class="details-wrapper">
+        <div class="main-info">
+            <h3>{{project.projectName}}</h3>
+            <p>Developed by: {{project.userId.username}}</p>
+            <div class="img-frame">
+                <img src={{project.imageUrl}} alt="Project Image">
+            </div>
+            <div class="timestamps">
+                <p>Added to SPDB on {{project.created_at | datePipe}}</p>
+                <p>Last updated on {{project.updatedAt | datePipe}}</p>
+            </div>
+        </div>
+        <div class="aside">
+            <h5>Additional Info:</h5>
+        </div>
+    </div>
 </div>

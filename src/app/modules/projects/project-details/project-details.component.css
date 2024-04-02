@@ -8,3 +8,51 @@
     justify-content: center;
     color: #4F4F4F;
 }
+
+.details-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 95%;
+    height: 90%;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+div.img-frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-height: 80%;
+}
+
+img {
+    object-fit: contain;
+    width: 70%;
+    border-radius: 5%;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.timestamps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    position: absolute;
+    bottom: 15%;
+}
+
+div.timestamps p {
+    font-size: small;
+    margin: 0;
+}

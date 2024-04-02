@@ -10,7 +10,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   getAllProjects(){
-
     return this.http.get<Project[]>("/api/themes");
   }
 
@@ -20,5 +19,8 @@ export class ApiService {
     return this.http.post<Project>("/api/themes", payload);
   }
 
+  getProjectById(id: string) {
+    return this.http.get<Project>(`/api/themes/${id}`);
+  }
   
 }

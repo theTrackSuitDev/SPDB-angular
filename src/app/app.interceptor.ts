@@ -43,8 +43,10 @@ export class AppInterceptor implements HttpInterceptor {
         } else if (error.status === 409 && error.url === `${apiUrl}/register`) {
           error.message = "Email or Username are already taken!"
           this.errorService.setError(error);
+        } else if (error.error?.err?.name === "CastError" && error.error?.err?.path === "_id") {
+          this.router.navigate(['/404']);
         } else {
-          this.errorService.setError(error);
+          this.errorService.setError(error);         
         }
 
         return [error];

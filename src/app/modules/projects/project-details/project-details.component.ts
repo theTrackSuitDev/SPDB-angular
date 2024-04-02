@@ -4,12 +4,15 @@ import { ApiService } from 'src/app/services/api.service';
 import { UserService } from 'src/app/services/user.service';
 import { Project } from 'src/app/types/project';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { fadeInOnEnterAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-project-details',
   templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.css']
+  styleUrls: ['./project-details.component.css'],
+  animations: [fadeInOnEnterAnimation()]
 })
+
 export class ProjectDetailsComponent implements OnInit {
   project: Project = {} as Project;
   isLoading: boolean = true;
@@ -48,7 +51,9 @@ export class ProjectDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(data => {
       const projectId = data['projectId'];
 
-      console.log(projectId);
+      if(confirm("Are you sure to delete the project?")) {
+        console.log(projectId);
+      }
       
     });
     

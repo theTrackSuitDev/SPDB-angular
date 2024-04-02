@@ -3,7 +3,7 @@
         <app-loader></app-loader>
     </div>
     <div *ngIf="!isLoading" class="details-wrapper">
-        <div class="main-info">
+        <div *ngIf="true" [@fadeInOnEnter] class="main-info">
             <h3>{{project.projectName}}</h3>
             <p>Developed by: {{project.userId.username}}</p>
             <div class="img-frame">
@@ -14,7 +14,7 @@
                 <p>Last updated on {{project.updatedAt | datePipe}}</p>
             </div>
         </div>
-        <div class="aside">
+        <div *ngIf="true" [@fadeInOnEnter] class="aside">
             <div class="tech">
                 <span>Built with {{project.technology}}</span>
             </div>

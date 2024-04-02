@@ -22,5 +22,9 @@ export class ApiService {
   getProjectById(id: string) {
     return this.http.get<Project>(`/api/themes/${id}`);
   }
+
+  deleteProjectById(id: string) {
+    return this.http.delete<Project>(`/api/themes/${id}`);
+  }
   
 }

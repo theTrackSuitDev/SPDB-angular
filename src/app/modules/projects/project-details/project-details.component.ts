@@ -51,8 +51,8 @@ export class ProjectDetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe(data => {
       const projectId = data['projectId'];
 
-      if(confirm("Are you sure to delete the project?")) {
-        console.log(projectId);
+      if(confirm("Are you sure you want to delete this project?")) {
+        this.apiService.deleteProjectById(projectId).subscribe(() => this.router.navigate(['/content/projects']));
       }
       
     });

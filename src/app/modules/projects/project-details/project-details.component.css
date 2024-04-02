@@ -56,3 +56,102 @@ div.timestamps p {
     font-size: small;
     margin: 0;
 }
+
+.aside {
+    margin-top: 5%;
+}
+
+.tech {
+    font-size: xx-large;
+}
+
+.desc {
+    margin-bottom: 5%;
+}
+
+.desc-title {
+    margin-top: 5%;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.desc p {
+    margin: 0;
+    font-size: larger;
+}
+
+.links-title {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    font-size: 50px;
+}
+
+.links a {
+    color: #4F4F4F;
+    border-radius: 50%;
+}
+
+.links a:hover {
+    color: #0262C2;
+}
+
+a.not-provided {
+    pointer-events: none;
+    color: #a7a7a7 !important;
+}
+
+::ng-deep .tooltip-class .tooltip-inner {
+    background-color: #4F4F4F;
+}
+
+::ng-deep .tooltip-class.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #4F4F4F;
+}
+
+.action-title {
+    font-size: 20px;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.action-btns {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    position: absolute;
+    bottom: 35%;
+}
+
+.action-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.edit-btn {
+    font-size: 20px;
+    border-color: #0262C2;
+    background-color: #0262C2;
+}
+
+.edit-btn:hover {
+    background-color: #DEE5ED;
+    color: #0262C2;
+}
+
+.delete-btn {
+    font-size: 20px;
+    color: #DEE5ED;
+    border-color: #4F4F4F;
+    background-color: #4F4F4F;
+}
+
+.delete-btn:hover {
+    background-color: #DEE5ED;
+    color: #4F4F4F;
+}

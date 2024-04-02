@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { UserService } from 'src/app/services/user.service';
 import { Project } from 'src/app/types/project';
+import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-project-details',
@@ -13,6 +14,8 @@ export class ProjectDetailsComponent implements OnInit {
   project: Project = {} as Project;
   isLoading: boolean = true;
   isAuthor: boolean = false;
+  faYoutube = faYoutube;
+  faGithub = faGithub;
 
   constructor(private apiService: ApiService, private activatedRoute: ActivatedRoute, private router: Router, private userService: UserService) {}
 
@@ -39,5 +42,15 @@ export class ProjectDetailsComponent implements OnInit {
         
       });
     });
+  }
+
+  deleteProject() {
+    this.activatedRoute.params.subscribe(data => {
+      const projectId = data['projectId'];
+
+      console.log(projectId);
+      
+    });
+    
   }
 }

@@ -9,8 +9,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../shared/shared.module';
-
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,8 @@ import { SharedModule } from '../shared/shared.module';
     ProjectRoutingModule,
     ReactiveFormsModule,
     NgbModule,
-    SharedModule    
+    SharedModule,
+    FontAwesomeModule    
   ]
 })
 export class ProjectsModule { }

@@ -15,7 +15,47 @@
             </div>
         </div>
         <div class="aside">
-            <h5>Additional Info:</h5>
+            <div class="tech">
+                <span>Built with {{project.technology}}</span>
+            </div>
+
+            <p class="desc-title">Description:</p>
+            <div class="desc">
+                <p>{{project.description}}</p>
+            </div>
+
+            <p class="links-title">External Links:</p>
+            <div class="links">
+                <div class="github" placement="bottom" ngbTooltip="Not available"
+                    [disableTooltip]="project.gitHubRepo !== ''" tooltipClass="tooltip-class">
+                    <a href="{{project.gitHubRepo}}" target="_blank" [class.not-provided]="project.gitHubRepo === ''">
+                        <fa-icon [icon]="faGithub"></fa-icon>
+                    </a>
+                </div>
+
+                <div class="youtube" placement="bottom" ngbTooltip="Not available"
+                    [disableTooltip]="project.videoUrl !== ''" tooltipClass="tooltip-class">
+                    <a href="{{project.videoUrl}}" target="_blank" [class.not-provided]="project.videoUrl === ''">
+                        <fa-icon [icon]="faYoutube"></fa-icon>
+                    </a>
+                </div>
+            </div>
+
+            <div *ngIf="isAuthor" class="action-btns">
+                <p class="action-title">Actions available:</p>
+
+                <div class="action-container">
+                    <a routerLink="/content/projects/edit/{{project._id}}" class="btn btn-primary edit-btn"
+                        role="button">Edit</a>
+
+                    <button class="btn btn-primary delete-btn" role="button" (click)="deleteProject()">Delete</button>
+                </div>
+
+            </div>
+
+            <div *ngIf="!isAuthor" class="action-btns">
+                <p class="action-title">No actions available</p>
+            </div>
         </div>
     </div>
 </div>

@@ -239,7 +239,7 @@ This project is licensed under the **MIT license**.
 
 See [LICENSE](LICENSE) for more information.
 
-!Note: The info and pictures used for the test projects in the DB backups are user with educational, demonstrative and absolutely non-profit purposes! The author of the SPDB web app does not own, nor claims copyrights on them. 
+!Note: The info and pictures used for the test projects in the DB backup are used with educational, demonstrative and absolutely non-profit purposes! The author of the SPDB web app does not own, nor claims copyrights on them. 
 
 ## Acknowledgements
 

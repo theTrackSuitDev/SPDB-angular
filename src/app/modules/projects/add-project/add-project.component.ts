@@ -38,8 +38,7 @@ export class AddProjectComponent {
 
     this.apiService.createProject(projectName!, technology!, description!, imageUrl!, videoUrl!, gitHubRepo!)
       .subscribe((newProject) => {
-        console.log(newProject);
-        this.router.navigate(["/content/projects"])
+        this.router.navigate([`/content/projects/${newProject._id}`])
       });
   }
 

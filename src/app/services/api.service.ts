@@ -23,6 +23,13 @@ export class ApiService {
     return this.http.get<Project>(`/api/themes/${id}`);
   }
 
+  editProjectById(id: string, projectName: string, technology: string, description: string, imageUrl: string, videoUrl: string, gitHubRepo: string) {
+
+    const payload = { projectName, technology, description, imageUrl, videoUrl, gitHubRepo };
+
+    return this.http.put<Project>(`/api/themes/${id}`, payload);
+  }
+
   deleteProjectById(id: string) {
     return this.http.delete<Project>(`/api/themes/${id}`);
   }

@@ -21,11 +21,11 @@
         <div class="form-group select">
             <label for="technology">Technology Used</label>
             <select class="form-select" formControlName="technology">
-                <option value="" disabled selected>Select Technology</option>
-                <option value="ReactJS">React</option>
-                <option value="AngularJS">Angular</option>
-                <option value="VueJS">Vue</option>
-                <option value="Other">Other</option>
+                <option value="" disabled>Select Technology</option>
+                <option value="ReactJS" [selected] = "project.technology === 'ReactJS'">React</option>
+                <option value="AngularJS" [selected] = "project.technology === 'AngularJS'">Angular</option>
+                <option value="VueJS" [selected] = "project.technology === 'VueJS'">Vue</option>
+                <option value="Other" [selected] = "project.technology === 'Other'">Other</option>
               </select>
         </div>
         <ng-container *ngIf="form.get('technology')?.touched">          

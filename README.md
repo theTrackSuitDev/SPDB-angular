@@ -110,7 +110,8 @@ In order to run the app locally, you must have installed and running:
 
 First, ensure the MongoDB server is running and uses the default port 27017.
 
-Then open a terminal of you choice and navigate to the 'Rest-api' folder, provided in the SPDB repo.
+Download the 'resources' zip archive, provided in the SPDB repo and extract its contents.
+Then open a terminal of you choice and navigate to the 'Rest-api' folder.
 
 Install the API dependencies:
 ```sh

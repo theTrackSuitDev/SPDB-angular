@@ -55,7 +55,7 @@ Key features of **The Student Project Database**:
 - Interactivity built using the Angular framework
 - Different dynamic pages that fetch data from the back-end, allowing their content to change with the application state (All Project page, Project Details page and Edit Project page)
 - Specific pages for listing records and record details
-- Communication to a remote service (a REST api, provided in the Resources folder)
+- Communication to a remote service (a REST api, provided in the 'resources' folder)
 - Authentication implementation allowing users to Register and Login in order to access the full features of the app
 - Public part (accessible without authentication) and Private part (available for registered users)
 - Implementation of all CRUD operations (create, read, update, delete)
@@ -145,7 +145,7 @@ You're all set! Open your browser on http://localhost:4200/ and enjoy using the 
 
 #### Optional (DB restore)
 
-After successfully starting the app, you may use the DB backup json files(provided in the SPDB resources folder) to restore some DB entries. 
+After successfully starting the app, you may use the DB backup json files(provided in the SPDB 'resources' folder) to restore some DB entries. 
 
 The recommended approach is to install and use the [MongoDB Compass GUI](https://www.mongodb.com/products/tools/compass).
 
@@ -157,7 +157,7 @@ The recommended approach is to install and use the [MongoDB Compass GUI](https:/
 
 4. The 'projectDb' database must contain 'themes' and 'users' collections. If missing, use GUI "Create collection" button and create collections with those exact names.
 
-5. Open each of the two collections and use Add data -> Import JSON buttons to import the provided resource files.
+5. Open each of the two collections and use Add data -> Import JSON buttons to import the provided in 'resources' folder DB backup files.
 
 You now have a set of of test projects, as well as 3 test users:
 | Username                       | Email     | Password                                                                 |

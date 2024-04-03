@@ -6,7 +6,6 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './components/main/main.component';
 import { CoreModule } from './modules/core/core.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { HomeComponent } from './components/home/home.component';
@@ -21,11 +20,9 @@ import { AuthComponent } from './components/auth/auth.component';
 import { ToastComponent } from './modules/shared/toast/toast.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
     HomeComponent,
     AboutComponent,
     NotFoundComponent,

@@ -215,7 +215,7 @@ A global routing module, assets folder and environments are also present, as wel
 
 - Basic and unresponsive design
 - Lacking features for more detailed feedback (such as comments and likes)
-- 401 server response on initial load or on refresh when not logged (expected behavior, explained [above](#app-usage))
+- 401 server response on initial load or on refresh when not logged (expected behavior, explained [above](#app-usage), see !Note)
 - Despite being handled and presented to the user with a toast, some errors may come with a 500 response status, which is caused by an API limitation (very basic global error handler on the back-end)
 - The app does not store authentication data in the local/session storage, but reads the cookie to immediately check the user status. In order for the cookie to be accessible, the API sends it without the 'http-only' flag, which may be considered a security vulnerability. 
 
